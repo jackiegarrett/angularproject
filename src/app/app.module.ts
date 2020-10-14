@@ -1,18 +1,21 @@
+import { CoreModule } from './core/core.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { CoreModule } from './core/core.module';
 import { AppRoutingModule } from './app-routing.module';
+import { SearchCriteriaComponent } from './search-criteria/search-criteria.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
-    BrowserModule,
     CoreModule,
-    AppRoutingModule
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

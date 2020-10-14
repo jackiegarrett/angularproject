@@ -6,6 +6,7 @@ import { SearchCriteriaComponent } from '../search-criteria/search-criteria.comp
 import { MovieListComponent } from '../movie-list/movie-list.component';
 import { WatchlistPageComponent } from '../watchlist-page/watchlist-page.component';
 
+
 @NgModule({
   declarations: [
     SearchCriteriaComponent,
@@ -15,6 +16,13 @@ import { WatchlistPageComponent } from '../watchlist-page/watchlist-page.compone
   imports: [
     CommonModule,
     CoreRoutingModule,
+  ],
+  exports: [
+    SearchCriteriaComponent,
+    MovieListComponent,
+    WatchlistPageComponent
   ]
 })
-export class CoreModule { }
+export class CoreModule {
+
+ }

@@ -1,0 +1,25 @@
+.filterResultsContainer {
+    width: 300px;
+}
+
+ul {
+    padding-left: 15px;
+}
+
+/* li {
+    list-style: none;
+} */
+
+.releaseDateContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.yearToYearContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+select {
+    margin: 0px 15px;
+}

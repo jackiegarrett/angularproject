@@ -44,3 +44,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# API Environment put route under here after creating the environment
+src/environments/apienvironment.ts
