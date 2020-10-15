@@ -11,16 +11,13 @@ export class SearchCriteriaComponent implements OnInit {
   constructor(private getApiService: GetAPIService) { }
 
   genresArray: any[] = [];
-  newArrayGenres:any[] = [];
 
   ngOnInit(): void {
     this.getApiService.getGenres().subscribe((result: any) => {
       console.log("result", result);
-      this.genresArray = result;
-      for (let i = 0; i < this.genresArray.length; i++) {
-        this.newArrayGenres.push(this.genresArray);
-      }
+      this.genresArray = result.genres;
     })
+
   }
 
 }

@@ -16,8 +16,8 @@
 
             <ol>
                 <li
-                *ngFor = "let array of newArrayGenres; index as i">
-                {{ array.genres[i].name }}
+                *ngFor = "let item of genresArray; index as i ">
+                {{ item.name }}
                 </li>
             </ol>
 

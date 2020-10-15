@@ -13,6 +13,7 @@ export class MovieListComponent implements OnInit {
   posterPath: string = "https://image.tmdb.org/t/p/w154";
   movieInfo: any[] = [];
   newArray:any[] = [];
+  genresArray: any[] = [];
 
   ngOnInit(): void {
     this.getApiService.getMovies().subscribe((result: any) => {
@@ -22,6 +23,14 @@ export class MovieListComponent implements OnInit {
         this.newArray.push(this.movieInfo);
       }
     })
+
+    this.getApiService.getGenres().subscribe((result: any) => {
+      console.log("result", result);
+      this.genresArray = result.genres;
+    })
+
+    //getYear, pass in release date to getFullYear return the year 
+
   }
 
 }
