@@ -21,12 +21,9 @@ export class GetAPIService {
     return this.httpClient.get<any>(url);
   }
 
-  // nextPage = (): any => {
-  //   this.pageCount++;
-  //   let url = 'https://api.themoviedb.org/3/discover/movie?api_key=80293729e43a58b6df6bccaa278d8358&sort_by=vote_average.asc&vote_count.gte=50&page=' + this.pageCount;
-  //   return this.httpClient.get<any>(url);
-  // }
+  getGenres = ():any => {
+    let genreUrl = 'https://api.themoviedb.org/3/genre/movie/list?api_key=80293729e43a58b6df6bccaa278d8358&language=en-US'
+    return this.httpClient.get<any>(genreUrl)
+  }
 
 }
-
-  //Gallery view component -- create empty array and loop through api data. Be sure to ensure unique values

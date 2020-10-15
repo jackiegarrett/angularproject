@@ -10,18 +10,17 @@ export class SearchCriteriaComponent implements OnInit {
 
   constructor(private getApiService: GetAPIService) { }
 
-  genres: any[] = [];
-  newArray:any[] = [];
+  genresArray: any[] = [];
+  newArrayGenres:any[] = [];
 
   ngOnInit(): void {
-    this.getApiService.getMovies().subscribe((result: any) => {
+    this.getApiService.getGenres().subscribe((result: any) => {
       console.log("result", result);
-      this.genres = result;
-      for (let i = 0; i < 20; i++) {
-        this.newArray.push(this.genres);
+      this.genresArray = result;
+      for (let i = 0; i < this.genresArray.length; i++) {
+        this.newArrayGenres.push(this.genresArray);
       }
     })
-
   }
 
 }

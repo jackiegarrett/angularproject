@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GetAPIService } from '../core/get-api.service';
 
 @Component({
   selector: 'app-movie-list',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovieListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private getApiService: GetAPIService) { }
+
+  movieInfo: any[] = [];
+  newArray:any[] = [];
 
   ngOnInit(): void {
+    this.getApiService.getMovies().subscribe((result: any) => {
+      console.log("result", result);
+      this.movieInfo = result;
+      for (let i = 0; i < 20; i++) {
+        this.newArray.push(this.movieInfo);
+      }
+    })
   }
 
 }

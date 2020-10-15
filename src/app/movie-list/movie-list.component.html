@@ -1,1 +1,6 @@
-<p>movie-list works!</p>
+<div class="movieListContainer">
+    <ol class="practice">
+        <li
+        *ngFor = "let array of newArray; index as i">{{array.results[i].overview}}</li>
+    </ol>
+</div>

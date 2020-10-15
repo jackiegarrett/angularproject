@@ -1,21 +1,32 @@
 <div class="filterResultsContainer">
     <div class="searchContainer">
         <input type="text"
-        placeholder="Search query">
-        <button id="search">
-            ICON
+        id="searchResults"
+        placeholder="Search by Title">
+        <button id="searchButton">
+            <img src="./../../assets/icon-search.svg">
         </button>
     </div>
     
     <div class="genreContainer">
-        <h3 class="criteriaHeading">Genre</h3>
+        <h3 class="criteriaHeading">
+            <img src="./../../assets/icon-genre.svg">
+            Genre
+        </h3>
+
         <ul>
-            <li> Genre </li>
+            <li *ngFor = "let array of newArrayGenres; index as i">
+            {{ array.genres[i].name }}
+            </li>
         </ul>
+
     </div>
     
     <div class="releaseDateContainer">
-        <h3 class="criteriaHeading">Release Date</h3>
+        <h3 class="criteriaHeading">
+            <img src="./../../assets/icon-genre.svg">
+            Release Date
+        </h3>
         <div class="yearToYearContainer">
             <select name="" id=""></select>
             <p>to</p>
@@ -24,7 +35,10 @@
     </div>
     
     <div class="runTimeContainer">
-        <h3 class="criteriaHeading">Run Time</h3>
+        <h3 class="criteriaHeading">
+            <img src="./../../assets/icon-duration.svg">
+            Run Time
+        </h3>
         <ul>
             <li> <input type="checkbox" id="shortLength" name="shortLength"> Short (< 1 hour)</li>
             <li> <input type="checkbox" id="averageLength" name="averageLength"> Average ( 1-2 hours)</li>
@@ -32,11 +46,7 @@
         </ul>
     </div>
 
-    <ol class="practice">
-    <li
-    *ngFor = "let array of newArray; index as i">{{array.results[i].overview}}</li>
-    </ol>
+    <button id="clearButton">Clear</button>
 
-    <!-- <button (click)="nextPage()">Next Page</button> -->
 </div>
 
