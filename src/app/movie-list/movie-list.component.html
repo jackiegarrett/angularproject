@@ -1,6 +1,22 @@
 <div class="movieListContainer">
-    <ol class="practice">
-        <li
-        *ngFor = "let array of newArray; index as i">{{array.results[i].overview}}</li>
-    </ol>
+    <div
+    *ngFor = "let array of newArray; index as i"
+     class="movieCard">
+        <div class="moviePoster">
+<img [src]="'https://image.tmdb.org/t/p/w154' + array.results[i].poster_path" alt="">
+        </div>
+        <div class="movieInformation">
+            <div class="titleAndYear">
+                <div class="movieTitleText">{{array.results[i].title}}
+                </div>
+                <div class="yearText">                ({{array.results[i].release_date}})
+
+                </div>
+            </div>
+            Genre: {{array.results[i].genre_ids}}
+            div.
+            <img src="./../../assets/icon-ticket.svg">
+        </div>
+
+    </div>
 </div>

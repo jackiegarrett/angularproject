@@ -1,6 +1,7 @@
 .filterResultsContainer {
     width: 300px;
     margin-top: 100px;
+    position: fixed;
 }
 
 .searchContainer {
@@ -33,10 +34,15 @@
     flex-direction: row;
     align-content: baseline;
     font-family: 'Lobster', cursive;
+    font-weight: lighter;
     color: white;
     background-color: #243d94;
     padding: 5px 16px;
     border-radius: 5px;
+}
+
+.headerImage {
+    margin-right: 10px;
 }
 
 ul {

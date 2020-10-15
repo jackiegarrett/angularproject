@@ -10,6 +10,7 @@ export class MovieListComponent implements OnInit {
 
   constructor(private getApiService: GetAPIService) { }
 
+  posterPath: string = "https://image.tmdb.org/t/p/w154";
   movieInfo: any[] = [];
   newArray:any[] = [];
 
