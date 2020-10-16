@@ -42,6 +42,8 @@
     background-color: #243d94;
     padding: 5px 16px;
     border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .headerImage {
@@ -55,6 +57,10 @@ ul {
 li {
     list-style: none;
     font-family: 'Noto Sans', sans-serif;
+}
+
+.genreContainer {
+    column-count: 2;
 }
 
 .releaseDateContainer {
@@ -76,10 +82,30 @@ select {
     margin: 0px 15px;
 }
 
+.buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+#submitButton {
+    display: flex;
+    justify-content: center;
+    width: 45%;
+    font-family: 'Lobster', cursive;
+    font-size: 18px;
+    color: white;
+    border: none;
+    background-color: #243d94;
+    border-radius: 5px;
+    padding: 5px 0px;
+}
+
 #clearButton {
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 45%;
     font-family: 'Lobster', cursive;
     font-size: 18px;
     color: #243d94;
