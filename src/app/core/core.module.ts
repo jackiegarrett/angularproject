@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { CoreRoutingModule } from './core-routing.module';
 import { SearchCriteriaComponent } from '../search-criteria/search-criteria.component';
@@ -16,6 +17,7 @@ import { WatchlistPageComponent } from '../watchlist-page/watchlist-page.compone
   imports: [
     CommonModule,
     CoreRoutingModule,
+    FormsModule
   ],
   exports: [
     SearchCriteriaComponent,

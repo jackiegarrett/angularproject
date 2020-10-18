@@ -1,28 +1,25 @@
 <div class="filterResultsContainer">
     <div class="searchContainer">
-        <input type="text"
-        id="searchResults"
-        placeholder="Search by Title">
-        <button id="searchButton">
+        <input type="text" [(ngModel)]="userInput" id="searchResults" placeholder="Search by Title">
+        <button id=" searchButton" (click)="getTitle()">
             <img src="./../../assets/icon-search.svg">
         </button>
     </div>
-    
+
     <div class="genreContainer">
         <h3 class="criteriaHeading">
             <img src="./../../assets/icon-genre.svg" class="headerImage">
             Genre
         </h3>
 
-            <ol>
-                <li
-                *ngFor = "let item of genresArray; index as i ">
+        <ol>
+            <li *ngFor="let item of genresArray; index as i ">
                 {{ item.name }}
-                </li>
-            </ol>
+            </li>
+        </ol>
 
     </div>
-    
+
     <div class="releaseDateContainer">
         <h3 class="criteriaHeading">
             <img src="./../../assets/icon-genre.svg" class="headerImage">
@@ -34,7 +31,7 @@
             <select name="" id=""></select>
         </div>
     </div>
-    
+
     <div class="runTimeContainer">
         <h3 class="criteriaHeading">
             <img src="./../../assets/icon-duration.svg" class="headerImage">
@@ -50,4 +47,4 @@
     <button id="clearButton">Clear</button>
 
 </div>
-
+<app-movie-list [userInput]="searchInput"></app-movie-list>
