@@ -1,7 +1,5 @@
-<div class="movieListContainer">
-    <div
-    *ngFor = "let array of newArray; index as i"
-     class="movieCard">
+<div class="movieListContainer" *ngIf="userInput === undefined">
+    <div *ngFor="let array of newArray; index as i" class="movieCard">
         <div class="moviePoster">
             <img [src]="'https://image.tmdb.org/t/p/w92' + array.results[i].poster_path" alt="">
         </div>
@@ -19,6 +17,30 @@
                 <img src="./../../assets/icon-ticket.svg">
                 <p class="addOrRemoveText">Add</p>
             </div>
+        </div>
+
+    </div>
+
+</div>
+<div class="movieListContainer">
+    <div *ngFor="let array of userInput; index as i" class="movieCard">
+        <div class="moviePoster">
+            <img [src]="'https://image.tmdb.org/t/p/w92' + array.poster_path" alt="">
+        </div>
+        <div class="movieInformation">
+            <div class="titleAndYear">
+                <div class="movieTitleText">{{array.title}}
+                </div>
+                <div class="yearText"> ({{array.release_date}})
+
+                </div>
+            </div>
+            Genre: {{array.genre_ids}}
+            <div class="addRemoveButton">
+                <img src="./../../assets/icon-ticket.svg">
+                <p class="addOrRemoveText">Add</p>
+            </div>
+
         </div>
 
     </div>

@@ -1,9 +1,7 @@
 <div class="filterResultsContainer">
     <div class="searchContainer">
-        <input type="text"
-        id="searchResults"
-        placeholder="Search by Title">
-        <button id="searchButton">
+        <input type="text" [(ngModel)]="userInput" id="searchResults" placeholder="Search by Title">
+        <button id="searchButton" (click)="getTitle()">
             <img src="./../../assets/icon-search.svg">
         </button>
     </div>
@@ -22,7 +20,7 @@
             </li>
         </ul>
     </div>
-    
+
     <div class="releaseDateContainer">
         <h3 class="criteriaHeading">
             <img src="./../../assets/icon-genre.svg" class="headerImage">
@@ -34,7 +32,7 @@
             <select name="" id=""></select>
         </div>
     </div>
-    
+
     <div class="runTimeContainer">
         <h3 class="criteriaHeading">
             <img src="./../../assets/icon-duration.svg" class="headerImage">
@@ -59,4 +57,4 @@
     </div>
 
 </div>
-
+<app-movie-list [userInput]="searchInput"></app-movie-list>
