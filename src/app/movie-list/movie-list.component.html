@@ -1,8 +1,9 @@
 <div class="movieListContainer" *ngIf="userInput === undefined">
     <div *ngFor="let array of newArray; index as i" class="movieCard">
         <div class="moviePoster">
-            <img [src]="'https://image.tmdb.org/t/p/w92' + array.results[i].poster_path" alt="">
+            <img [src]="'https://image.tmdb.org/t/p/w92' + array.results[i].poster_path">
         </div>
+
         <div class="movieInformation">
             <div class="titleAndYear">
                 <div class="movieTitleText">
@@ -12,16 +13,28 @@
                     ({{array.results[i].release_date}})
                 </div>
             </div>
-            Genre: {{array.results[i].genre_ids}}
-            <div class="addRemoveButton">
-                <img src="./../../assets/icon-ticket.svg">
-                <p class="addOrRemoveText">Add</p>
+
+            <div class="movieGenre">
+                Genre: {{array.results[i].genre_ids}}
             </div>
+
+            <div class="movieRunTime">
+                Run Time: {{array.results[i].genre_ids}}
+            </div>
+
+            <div class="addRemove-container">
+                <div class="addRemove-button">
+                    <img src="./../../assets/icon-ticket.svg">
+                    <p class="addOrRemoveText">Add</p>
+                </div>
+            </div>
+
         </div>
 
     </div>
 
 </div>
+
 <div class="movieListContainer">
     <div *ngFor="let array of userInput; index as i" class="movieCard">
         <div class="moviePoster">
