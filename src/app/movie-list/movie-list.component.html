@@ -3,14 +3,15 @@
     *ngFor = "let array of newArray; index as i"
      class="movieCard">
         <div class="moviePoster">
-<img [src]="'https://image.tmdb.org/t/p/w92' + array.results[i].poster_path" alt="">
+            <img [src]="'https://image.tmdb.org/t/p/w92' + array.results[i].poster_path" alt="">
         </div>
         <div class="movieInformation">
             <div class="titleAndYear">
-                <div class="movieTitleText">{{array.results[i].title}}
+                <div class="movieTitleText">
+                    {{array.results[i].title}}
                 </div>
-                <div class="yearText">                ({{array.results[i].release_date}})
-
+                <div class="yearText">
+                    ({{array.results[i].release_date}})
                 </div>
             </div>
             Genre: {{array.results[i].genre_ids}}
@@ -18,7 +19,6 @@
                 <img src="./../../assets/icon-ticket.svg">
                 <p class="addOrRemoveText">Add</p>
             </div>
-
         </div>
 
     </div>
