@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { GetAPIService } from '../core/get-api.service';
+
 
 @Component({
   selector: 'app-movie-list',
@@ -7,13 +8,14 @@ import { GetAPIService } from '../core/get-api.service';
   styleUrls: ['./movie-list.component.css']
 })
 export class MovieListComponent implements OnInit {
-
+@Input() userInput;
   constructor(private getApiService: GetAPIService) { }
 
   posterPath: string = "https://image.tmdb.org/t/p/w154";
   movieInfo: any[] = [];
   newArray:any[] = [];
   genresArray: any[] = [];
+  movieTitle: any[] = [];
 
   ngOnInit(): void {
     this.getApiService.getMovies().subscribe((result: any) => {
@@ -29,8 +31,13 @@ export class MovieListComponent implements OnInit {
       this.genresArray = result.genres;
     })
 
+    this.getApiService.getTitle(this.userInput).subscribe((result: any)=> {
+      console.log("result", result);
+    })
     //getYear, pass in release date to getFullYear return the year 
 
   }
 
 }
+
+// this.userInput
