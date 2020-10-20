@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GetAPIService } from '../core/get-api.service';
 import { NgForm } from '@angular/forms';
+
 @Component({
   selector: 'app-search-criteria',
   templateUrl: './search-criteria.component.html',

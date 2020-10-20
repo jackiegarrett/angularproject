@@ -3,24 +3,21 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { MovieListComponent } from '../movie-list/movie-list.component';
 import { WatchlistPageComponent } from '../watchlist-page/watchlist-page.component';
+import { SearchCriteriaComponent } from '../search-criteria/search-criteria.component';
 
 
 const routes: Routes = [
   {
-    path: 'movie-list',
-    component: MovieListComponent
+    path: 'search',
+    component: SearchCriteriaComponent
   },
   {
     path: 'watch-list',
     component: WatchlistPageComponent
   },
-  // {
-  //   path: 'movie-info/:id',
-  //   // component: ''
-  // },
   {
     path: '',
-    redirectTo: '/movie-list',
+    redirectTo: '/search',
     pathMatch: 'full'
   },
   {
